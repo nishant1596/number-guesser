@@ -67,7 +67,10 @@ function playAgain(){
   playAgainBtn.addEventListener('click',playAgainSpoof);
 }
 function guessLeftMsg(guessesLeftCopy){
-  setMessage(`${guessesLeftCopy} chances are left, ${guessInput.value} was not a correct number `,'blue');
+  if(guessInput.value > winningNum)
+    setMessage(`${guessesLeftCopy} chances are left, ${guessInput.value} was not a correct number. You have guessed a higher number. `,'blue');
+  else
+    setMessage(`${guessesLeftCopy} chances are left, ${guessInput.value} was not a correct number. You have guessed a lower number. `,'blue');
 }
 function setMessage(msg,color){
   message.style.color=color;
