@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Number Guesser</h1>
+    <h1>Number Guesser by Nishant</h1>
     <div id="game">
       <p>Guess a Number between <span class="min-num">1</span> and <span class="max-num">10</span></p>
       <input type="number" placeholder="Enter your guess" id="guess-input">
