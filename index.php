@@ -15,6 +15,7 @@
 <body>
   <div class="container">
     <h1>Number Guesser by Nishant</h1>
+    <h5>click <a href="https://github.com/nishant1596/number-guesser">here</a> for code</h5>
     <div id="game">
       <p>Guess a Number between <span class="min-num">1</span> and <span class="max-num">10</span></p>
       <input type="number" placeholder="Enter your guess" id="guess-input">
