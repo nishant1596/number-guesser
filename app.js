@@ -1,4 +1,5 @@
- let min=4,max=100,winningNum=5,guessesLeft=3;
+ let min=1,max=10,guessesLeft=3;
+let winningNum=Math.floor((Math.random() * 10) + 1);
 let guessesLeftCopy=guessesLeft;
 //UI Element
 const game=document.querySelector('#game'),
@@ -15,11 +16,11 @@ maxNum.textContent=max;
 guessBtn.addEventListener('click',(e)=>{
 
   let guess=parseInt(guessInput.value);
-validate(guess);
+validate(guess,winningNum);
 });
 
 
-function validate(guess){
+function validate(guess,winningNum){
 
   if (isNaN(guess) || guess<min || guess>max) {
     message.style.display='block';
@@ -65,6 +66,7 @@ function playAgainSpoof(){
 function playAgain(){
   playAgainBtn.style.display='block';
   playAgainBtn.addEventListener('click',playAgainSpoof);
+  winningNum=Math.floor((Math.random() * 10) + 1);
 }
 function guessLeftMsg(guessesLeftCopy){
   if(guessInput.value > winningNum)
